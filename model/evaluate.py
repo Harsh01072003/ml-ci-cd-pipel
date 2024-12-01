@@ -5,11 +5,11 @@ from sklearn.metrics import mean_squared_error
 import joblib
 
 # Load dataset
-data = pd.read_csv('data/boston.csv')
+data = pd.read_csv("D:/ml-ci-cd-pipe/data/Boston.csv")
 
 # Split dataset
-X = data.drop('PRICE', axis=1)
-y = data['PRICE']
+X = data.drop('MEDV', axis=1)
+y = data['MEDV']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Load the model
